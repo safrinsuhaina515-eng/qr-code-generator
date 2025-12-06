@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Code Generator</title>
 
-    <!-- Google Font -->
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
@@ -128,11 +128,10 @@
     <p class="note">Tip: Try your portfolio link, LinkedIn, or any message.</p>
 </div>
 
-<!-- QRCode.js Library (CDN) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <script>
-    let qr; // store QRCode object
+    let qr; 
 
     function generateQR() {
         const text = document.getElementById("text").value.trim();
@@ -141,12 +140,9 @@
             alert("Please enter some text or URL!");
             return;
         }
-
-        // clear previous QR
         const qrContainer = document.getElementById("qrcode");
         qrContainer.innerHTML = "";
 
-        // create new QR
         qr = new QRCode(qrContainer, {
             text: text,
             width: 180,
@@ -160,3 +156,4 @@
 
 </body>
 </html>
+
